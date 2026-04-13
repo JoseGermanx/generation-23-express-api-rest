@@ -2,17 +2,20 @@
 
 const express = require("express");
 
+const espaciosRoutes = require("./routes/espacios.routes")
+const reservarRoutes = require("./routes/reservas.routes")
+
 const app = express();
 
 
 //middlewares
 app.use(express.json());
 
+// Rutas de espacios
+app.use("/espacios", espaciosRoutes);
 
-app.get("/", (req,res)=> {
-    res.send("HOLA MUNDO")
-});
-
+// Rutas de reservas
+app.use("/reservas", reservarRoutes);
 
 
 module.exports = app;

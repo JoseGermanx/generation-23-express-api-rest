@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "nombre": "Sala de reuniones A",
+        "capacidad": 10,
+        "ubicación": "Primer piso",
+        "disponibilidad": true
+    }
+]
