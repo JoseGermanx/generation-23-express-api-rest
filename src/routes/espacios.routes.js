@@ -1,14 +1,10 @@
 
 const express = require("express");
+const { obstenerEspacios } = require("../controllers/espacios.controllers");
 
 const router = express.Router();
 
-router.get("/", (req, res)=>{
-    res.json({
-        msg: "Ruta para obtener espacios."
-    })
-})
-
+router.get("/", obstenerEspacios)
 
 
 module.exports = router
