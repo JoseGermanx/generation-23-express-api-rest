@@ -19,17 +19,22 @@ const writeReservas = async (reservas) => {
 
 
 const getAllReservas = async () => {
-
+    return await readReservas();
 }
 
-const createReserva = async () => {
-
+const createReserva = async (nuevaReserva) => {
+    const reservas = await readReservas();
+    reservas.push(nuevaReserva);
+    await writeReservas(reservas);
+    return nuevaReserva;
 }
 
+// TODO - Por implementar
 const updateReserva = async () => {
 
 }
 
+//TODO - Por implementar
 const deleteReserva = async () => {
 
 }
