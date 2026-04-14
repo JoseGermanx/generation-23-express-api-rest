@@ -5,5 +5,12 @@
         "capacidad": 10,
         "ubicación": "Primer piso",
         "disponibilidad": true
+    },
+    {
+        "id": 2,
+        "nombre": "Sala de reuniones B",
+        "capacidad": 20,
+        "ubicación": "Segundo Piso",
+        "disponibilidad": true    
     }
 ]
