@@ -26,5 +26,89 @@
     "fecha": "2026-04-15",
     "horaInicio": "14:00",
     "horaFin": "16:00"
+  },
+  {
+    "id": 1776183779951,
+    "espacioId": 2,
+    "fecha": "2026-04-15",
+    "horaInicio": "14:00",
+    "horaFin": "16:00"
+  },
+  {
+    "id": 1776184405541,
+    "espacioId": 2,
+    "fecha": "2026-04-15",
+    "horaInicio": "14:00",
+    "horaFin": "16:00"
+  },
+  {
+    "id": 1776184409840,
+    "espacioId": 2,
+    "fecha": "2026-04-15",
+    "horaInicio": "14:00",
+    "horaFin": "16:00"
+  },
+  {
+    "id": 1776184410412,
+    "espacioId": 2,
+    "fecha": "2026-04-15",
+    "horaInicio": "14:00",
+    "horaFin": "16:00"
+  },
+  {
+    "id": 1776184411085,
+    "espacioId": 2,
+    "fecha": "2026-04-15",
+    "horaInicio": "14:00",
+    "horaFin": "16:00"
+  },
+  {
+    "id": 1776184411302,
+    "espacioId": 2,
+    "fecha": "2026-04-15",
+    "horaInicio": "14:00",
+    "horaFin": "16:00"
+  },
+  {
+    "id": 1776184412084,
+    "espacioId": 2,
+    "fecha": "2026-04-15",
+    "horaInicio": "14:00",
+    "horaFin": "16:00"
+  },
+  {
+    "id": 1776184412463,
+    "espacioId": 2,
+    "fecha": "2026-04-15",
+    "horaInicio": "14:00",
+    "horaFin": "16:00"
+  },
+  {
+    "id": 1776184413259,
+    "espacioId": 2,
+    "fecha": "2026-04-15",
+    "horaInicio": "14:00",
+    "horaFin": "16:00"
+  },
+  {
+    "id": 1776184418134,
+    "espacioId": 1,
+    "fecha": "2026-04-15",
+    "horaInicio": "14:00",
+    "horaFin": "16:00"
+  },
+  {
+    "id": 1776184420209,
+    "espacioId": 1,
+    "fecha": "2026-04-15",
+    "horaInicio": "14:00",
+    "horaFin": "16:00"
+  },
+  {
+    "id": 1776184421173,
+    "espacioId": 1,
+    "fecha": "2026-04-15",
+    "horaInicio": "14:00",
+    "horaFin": "16:00"
   }
 ]
