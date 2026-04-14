@@ -1,113 +1,29 @@
 [
   {
-    "id": 1776181448171,
-    "espacioId": 2,
-    "fecha": "2026-04-15",
-    "horaInicio": "14:00",
-    "horaFin": "16:00"
-  },
-  {
-    "id": 1776181450125,
-    "espacioId": 2,
-    "fecha": "2026-04-15",
-    "horaInicio": "14:00",
-    "horaFin": "16:00"
-  },
-  {
-    "id": 1776181911275,
-    "espacioId": 2,
-    "fecha": "2026-04-15",
-    "horaInicio": "14:00",
-    "horaFin": "16:00"
-  },
-  {
-    "id": 1776181935980,
-    "espacioId": 2,
-    "fecha": "2026-04-15",
-    "horaInicio": "14:00",
-    "horaFin": "16:00"
-  },
-  {
-    "id": 1776183779951,
-    "espacioId": 2,
-    "fecha": "2026-04-15",
-    "horaInicio": "14:00",
-    "horaFin": "16:00"
-  },
-  {
-    "id": 1776184405541,
-    "espacioId": 2,
-    "fecha": "2026-04-15",
-    "horaInicio": "14:00",
-    "horaFin": "16:00"
-  },
-  {
-    "id": 1776184409840,
-    "espacioId": 2,
-    "fecha": "2026-04-15",
-    "horaInicio": "14:00",
-    "horaFin": "16:00"
-  },
-  {
-    "id": 1776184410412,
-    "espacioId": 2,
-    "fecha": "2026-04-15",
-    "horaInicio": "14:00",
-    "horaFin": "16:00"
-  },
-  {
-    "id": 1776184411085,
-    "espacioId": 2,
-    "fecha": "2026-04-15",
-    "horaInicio": "14:00",
-    "horaFin": "16:00"
-  },
-  {
-    "id": 1776184411302,
-    "espacioId": 2,
-    "fecha": "2026-04-15",
-    "horaInicio": "14:00",
-    "horaFin": "16:00"
-  },
-  {
-    "id": 1776184412084,
-    "espacioId": 2,
-    "fecha": "2026-04-15",
-    "horaInicio": "14:00",
-    "horaFin": "16:00"
-  },
-  {
-    "id": 1776184412463,
-    "espacioId": 2,
-    "fecha": "2026-04-15",
-    "horaInicio": "14:00",
-    "horaFin": "16:00"
-  },
-  {
-    "id": 1776184413259,
-    "espacioId": 2,
-    "fecha": "2026-04-15",
-    "horaInicio": "14:00",
-    "horaFin": "16:00"
-  },
-  {
-    "id": 1776184418134,
+    "id": 1776185804939,
     "espacioId": 1,
-    "fecha": "2026-04-15",
-    "horaInicio": "14:00",
-    "horaFin": "16:00"
+    "fecha": "14-04-2026",
+    "horaInicio": "10:00",
+    "horaFin": "11:00"
   },
   {
-    "id": 1776184420209,
-    "espacioId": 1,
-    "fecha": "2026-04-15",
-    "horaInicio": "14:00",
-    "horaFin": "16:00"
+    "id": 1776185828765,
+    "espacioId": 2,
+    "fecha": "14-04-2026",
+    "horaInicio": "10:00",
+    "horaFin": "11:00"
   },
   {
-    "id": 1776184421173,
+    "id": 1776185867260,
+    "espacioId": 2,
+    "fecha": "14-04-2026",
+    "horaInicio": "11:00",
+    "horaFin": "12:00"
+  },
+  {
+    "id": 1776186017608,
     "espacioId": 1,
-    "fecha": "2026-04-15",
+    "fecha": "14-04-2026",
     "horaInicio": "14:00",
     "horaFin": "16:00"
   }
