@@ -26,5 +26,12 @@
     "fecha": "14-04-2026",
     "horaInicio": "14:00",
     "horaFin": "16:00"
+  },
+  {
+    "id": 1776194199073,
+    "espacioId": 1,
+    "fecha": "14-04-2026",
+    "horaInicio": "11:00",
+    "horaFin": "12:00"
   }
 ]

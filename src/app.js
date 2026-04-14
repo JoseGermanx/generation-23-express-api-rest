@@ -2,6 +2,7 @@
 
 const express = require("express");
 const morgan = require("morgan");
+const cors = require("cors");
 const espaciosRoutes = require("./routes/espacios.routes")
 const reservarRoutes = require("./routes/reservas.routes")
 
@@ -11,6 +12,7 @@ const app = express();
 //middlewares
 app.use(express.json());  // -> Middleware incopodado
 app.use(morgan("dev")); /// _> Middleware de terceros
+app.use(cors());
 
 app.use((req, res, next)=>{ // Middleware personalizado
 
