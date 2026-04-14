@@ -18,10 +18,7 @@ const crearReserva = async (req, res) => {
     const { espacioId, fecha, horaInicio, horaFin } = req.body;
 
     try {        
-        const reservas = await getAllReservas();
-    
-        const nuevoId = reservas.length ? Math.max(...reservas.map(elem => elem.id) + 1) : 1;
-    
+        const nuevoId = Date.now();
          const nuevaReserva = {
             id: nuevoId,
             espacioId,
