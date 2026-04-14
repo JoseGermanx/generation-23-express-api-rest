@@ -1,13 +1,11 @@
 
 const express = require("express");
+const { obtenerReservas, crearReserva } = require("../controllers/reservas.controllers");
 
 const router = express.Router();
 
-router.get("/", (req, res)=>{
-    res.json({
-        msg: "Ruta para obtener reservas."
-    })
-})
+router.get("/", obtenerReservas);
+router.post("/", crearReserva);
 
 
 module.exports = router
