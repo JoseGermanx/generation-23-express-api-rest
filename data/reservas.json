@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "id": 1776181448171,
+    "espacioId": 2,
+    "fecha": "2026-04-15",
+    "horaInicio": "14:00",
+    "horaFin": "16:00"
+  },
+  {
+    "id": 1776181450125,
+    "espacioId": 2,
+    "fecha": "2026-04-15",
+    "horaInicio": "14:00",
+    "horaFin": "16:00"
+  },
+  {
+    "id": 1776181911275,
+    "espacioId": 2,
+    "fecha": "2026-04-15",
+    "horaInicio": "14:00",
+    "horaFin": "16:00"
+  },
+  {
+    "id": 1776181935980,
+    "espacioId": 2,
+    "fecha": "2026-04-15",
+    "horaInicio": "14:00",
+    "horaFin": "16:00"
+  }
+]
