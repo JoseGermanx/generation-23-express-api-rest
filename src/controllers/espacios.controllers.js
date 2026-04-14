@@ -1,7 +1,7 @@
 const { getAllEspacios } = require("../models/espacios.models")
 
 
-const obstenerEspacios = async (req, res) => {
+const obtenerEspacios = async (req, res) => {
     try {
         const espacios = await getAllEspacios(); // pide los datos a la capa modelo
         res.status(200).json(espacios) // respuesta al cliente
@@ -22,6 +22,6 @@ const crearEspacios = async (req, res) => {
 
 
 module.exports = {
-    obstenerEspacios,
+    obtenerEspacios,
     crearEspacios
 }

@@ -1,10 +1,10 @@
 
 const express = require("express");
-const { obstenerEspacios, crearEspacios } = require("../controllers/espacios.controllers");
+const { obtenerEspacios, crearEspacios } = require("../controllers/espacios.controllers");
 
 const router = express.Router();
 
-router.get("/", obstenerEspacios)
+router.get("/", obtenerEspacios)
 
 router.post("/", crearEspacios)
 
