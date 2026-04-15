@@ -13,7 +13,7 @@ const obtenerReservas = async (req, res) => {
     }
 };
 
-const crearReserva = async (req, res) => {
+const crearReserva = async (req, res, next) => {
 
     const { espacioId, fecha, horaInicio, horaFin } = req.body;
 
@@ -31,12 +31,8 @@ const crearReserva = async (req, res) => {
     
          res.status(201).json(reservaCreada);
     } catch (error) {
-         console.log("error",error)
-         res.status(500).json({
-            msg: "Error de servidor."
-        })
+        next(error);       
     }
-
 }
 
 

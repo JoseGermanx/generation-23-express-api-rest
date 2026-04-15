@@ -12,21 +12,25 @@ const validateReserva = async (req, res, next) => {
         })
     }
 
-    // validar id del espacio que se va a reservar
-
-    const espacios = await getAllEspacios();
-    const espacioExiste = espacios.some(espacio => espacio.id === Number(espacioId));
-
-    if(!espacioExiste) {
-        return res.status(404).json({
-            msg: "El espacio seleccionado no existe."
-        })
+    try {
+        
+        // validar id del espacio que se va a reservar
+    
+        const espacios = await getAllEspacios();
+        const espacioExiste = espacios.some(espacio => espacio.id === Number(espacioId));
+    
+        if(!espacioExiste) {
+            return res.status(404).json({
+                msg: "El espacio seleccionado no existe."
+            })
+        }
+       
+    } catch (error) {
+        return next(error);
+        
     }
 
-
-
-
-    next();
+     next();
 }
 
 

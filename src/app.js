@@ -4,7 +4,8 @@ const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
 const espaciosRoutes = require("./routes/espacios.routes")
-const reservarRoutes = require("./routes/reservas.routes")
+const reservarRoutes = require("./routes/reservas.routes");
+const errorHandler = require("./middlewares/errorHandler");
 
 const app = express();
 
@@ -34,6 +35,9 @@ app.use("/espacios", espaciosRoutes);
 
 // Rutas de reservas
 app.use("/reservas", reservarRoutes);
+
+
+app.use(errorHandler); // sobreescribimos el manejador de errores de express.
 
 
 module.exports = app;
