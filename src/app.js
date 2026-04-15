@@ -6,6 +6,7 @@ const cors = require("cors");
 const espaciosRoutes = require("./routes/espacios.routes")
 const reservarRoutes = require("./routes/reservas.routes");
 const errorHandler = require("./middlewares/errorHandler");
+const notFound = require("./middlewares/notFound");
 
 const app = express();
 
@@ -31,12 +32,14 @@ app.use((req, res, next)=>{ // Middleware personalizado
 
 
 // Rutas de espacios
-app.use("/espacios", espaciosRoutes);
+// app.use("/api/v1/espacios", espaciosRoutes); definición específica de una versión de la api
+app.use("/espacios", espaciosRoutes); 
 
 // Rutas de reservas
 app.use("/reservas", reservarRoutes);
 
 
+app.use(notFound); // manejador de rutas no definidas.
 app.use(errorHandler); // sobreescribimos el manejador de errores de express.
 
 
