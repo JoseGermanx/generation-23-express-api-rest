@@ -1,0 +1,42 @@
+[{
+  "_id": {
+    "$oid": "69e6491175fcb7a555e5944c"
+  },
+  "nombre": "Alberto"
+},
+{
+  "_id": {
+    "$oid": "69e649b875fcb7a555e5944e"
+  },
+  "nombre": "Luis",
+  "edad": 35
+},
+{
+  "_id": 1,
+  "nombre": "Diana"
+},
+{
+  "_id": {
+    "$oid": "69e64a6175fcb7a555e59450"
+  }
+},
+{
+  "_id": {
+    "$oid": "69e64ae175fcb7a555e59451"
+  },
+  "id": 1,
+  "nombre": "Sala de reuniones A",
+  "capacidad": 10,
+  "ubicación": "Primer piso",
+  "disponibilidad": true
+},
+{
+  "_id": {
+    "$oid": "69e64ae175fcb7a555e59452"
+  },
+  "id": 2,
+  "nombre": "Sala de reuniones B",
+  "capacidad": 20,
+  "ubicación": "Segundo Piso",
+  "disponibilidad": true
+}]

@@ -1,0 +1,7 @@
+_id,nombre,edad,id,capacidad,ubicación,disponibilidad
+69e6491175fcb7a555e5944c,Alberto,,,,,
+69e649b875fcb7a555e5944e,Luis,35,,,,
+1,Diana,,,,,
+69e64a6175fcb7a555e59450,,,,,,
+69e64ae175fcb7a555e59451,Sala de reuniones A,,1,10,Primer piso,true
+69e64ae175fcb7a555e59452,Sala de reuniones B,,2,20,Segundo Piso,true

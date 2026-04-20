@@ -1,10 +1,11 @@
-const { getAllEspacios } = require("../models/espacios.models")
+const { getAllEspacios } = require("../models/espacios.models");
+const Espacio = require("../models/espacios.mongoose");
 
 
 const obtenerEspacios = async (req, res, next) => {
 
     try {            
-        const espacios = await getAllEspacios(); // pide los datos a la capa modelo
+        const espacios = await Espacio.find({}); // pide los datos a la capa modelo
         res.status(200).json(espacios) // respuesta al cliente
     } catch (error) {
        next(error);
