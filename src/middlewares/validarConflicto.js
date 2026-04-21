@@ -6,8 +6,8 @@ const validarConflicto = async (req, res, next) => {
   const { espacioId, fecha, horaInicio, horaFin } = req.body;
 
   try {
-    
-    const hayConflicto = await encontrarReservaPrevia();
+    //aquí esta el error
+    const hayConflicto = await encontrarReservaPrevia(espacioId, fecha, horaInicio, horaFin);
 
     console.log(hayConflicto)
   

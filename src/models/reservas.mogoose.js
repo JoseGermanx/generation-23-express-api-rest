@@ -31,7 +31,7 @@ const Reserva = mongoose.model('Reserva', reservaSchema);
     return await nuevaReserva.save();
  }
 
- // validar conflicto /// TODO: Revisar consulta!!! 
+ // validar conflicto
  async function encontrarReservaPrevia(espacioId, fecha, horaInicio, horaFin) {
    return await Reserva.findOne({
       espacioId: espacioId,
