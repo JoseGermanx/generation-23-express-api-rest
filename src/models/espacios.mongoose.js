@@ -19,4 +19,13 @@ const Espacio = mongoose.model('Espacio', espacioSchema)
 
 // Modelo Espacio --->>>>>> mongodb  colección espacios
 
-module.exports = Espacio;
+// obtener todos los espacios
+
+async function obtenerTodosLosEspacios() {
+    return await Espacio.find({});
+}
+
+
+module.exports = {
+    obtenerTodosLosEspacios
+};
