@@ -5,6 +5,7 @@ const morgan = require("morgan");
 const cors = require("cors");
 const espaciosRoutes = require("./routes/espacios.routes")
 const reservarRoutes = require("./routes/reservas.routes");
+const usuariosRoutes = require("./routes/users.routes")
 const errorHandler = require("./middlewares/errorHandler");
 const notFound = require("./middlewares/notFound");
 
@@ -37,6 +38,9 @@ app.use("/espacios", espaciosRoutes);
 
 // Rutas de reservas
 app.use("/reservas", reservarRoutes);
+
+// Rutas de gestion de usuarios
+app.use("/usuario", usuariosRoutes)
 
 
 app.use(notFound); // manejador de rutas no definidas.
