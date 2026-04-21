@@ -7,10 +7,10 @@
 // Definir el schema
 
 const espacioSchema = new mongoose.Schema({
-    nombre: String,
-    ubicacion: String,
-    capacidad: Number,
-    disponibilidad: Boolean
+    nombre: {type: String, require: true},
+    ubicacion: {type: String, require: true},
+    capacidad: {type: Number, require: true},
+    disponibilidad: {type: Boolean, default: true}
 })
 
 // Crear el modelo
