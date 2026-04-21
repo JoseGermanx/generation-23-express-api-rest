@@ -1,4 +1,5 @@
 const { getAllEspacios } = require("../models/espacios.models");
+const { obtenerUnEspacioPorId } = require("../models/espacios.mongoose");
 
 
 const validateReserva = async (req, res, next) => {
@@ -16,8 +17,7 @@ const validateReserva = async (req, res, next) => {
         
         // validar id del espacio que se va a reservar
     
-        const espacios = await getAllEspacios();
-        const espacioExiste = espacios.some(espacio => espacio.id === Number(espacioId));
+        const espacioExiste = await obtenerUnEspacioPorId(espacioId)
     
         if(!espacioExiste) {
             return res.status(404).json({

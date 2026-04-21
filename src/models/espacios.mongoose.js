@@ -25,7 +25,12 @@ async function obtenerTodosLosEspacios() {
     return await Espacio.find({});
 }
 
+async function obtenerUnEspacioPorId(id){
+    return await Espacio.findById(id)
+
+}
 
 module.exports = {
-    obtenerTodosLosEspacios
+    obtenerTodosLosEspacios,
+    obtenerUnEspacioPorId
 };

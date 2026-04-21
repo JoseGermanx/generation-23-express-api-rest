@@ -31,7 +31,20 @@ const Reserva = mongoose.model('Reserva', reservaSchema);
     return await nuevaReserva.save();
  }
 
+ // validar conflicto /// TODO: Revisar consulta!!! 
+ async function encontrarReservaPrevia(espacioId, fecha, horaInicio, horaFin) {
+   return await Reserva.findOne({
+      espacioId: espacioId,
+      fecha: fecha,
+      horaInicio: {$lt: horaFin},
+      horaFin: {$gt: horaInicio}
+   })
+
+ }
+
+
  module.exports = {
     obtenerTodasLasReservas,
-    crearUnaNuevaReserva
+    crearUnaNuevaReserva,
+    encontrarReservaPrevia
  }

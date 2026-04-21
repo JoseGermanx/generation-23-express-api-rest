@@ -1,4 +1,4 @@
-const { getAllReservas } = require("../models/reservas.models");
+const { encontrarReservaPrevia } = require("../models/reservas.mogoose");
 
 
 const validarConflicto = async (req, res, next) => {
@@ -6,12 +6,10 @@ const validarConflicto = async (req, res, next) => {
   const { espacioId, fecha, horaInicio, horaFin } = req.body;
 
   try {
-
-
-    const reservas = await getAllReservas();
     
-    const hayConflicto = reservas.some( reserva => reserva.espacioId === espacioId && reserva.fecha === fecha && horaInicio < reserva.horaFin && horaFin > reserva.horaInicio
-   )
+    const hayConflicto = await encontrarReservaPrevia();
+
+    console.log(hayConflicto)
   
     if(hayConflicto){
       return res.status(400).json({
