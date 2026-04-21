@@ -1,9 +1,10 @@
-const { getAllReservas, createReserva } = require("../models/reservas.models");
+const { obtenerTodasLasReservas, crearUnaNuevaReserva } = require("../models/reservas.mogoose");
+
 
 
 const obtenerReservas = async (req, res) => {
     try {
-        const reservas = await getAllReservas(); // pide los datos a la capa modelo
+        const reservas = await obtenerTodasLasReservas(); // pide los datos a la capa modelo
         res.status(200).json(reservas) // respuesta al cliente
     } catch (error) {
         console.log("error",error)
@@ -18,16 +19,14 @@ const crearReserva = async (req, res, next) => {
     const { espacioId, fecha, horaInicio, horaFin } = req.body;
 
     try {        
-        const nuevoId = Date.now();
-         const nuevaReserva = {
-            id: nuevoId,
+        const nuevaReserva = {
             espacioId,
             fecha,
             horaInicio,
             horaFin
          };
     
-         const reservaCreada = await createReserva(nuevaReserva);
+         const reservaCreada = await crearUnaNuevaReserva(nuevaReserva);
     
          res.status(201).json(reservaCreada);
     } catch (error) {
