@@ -28,6 +28,12 @@ async function crearNuevoUsuario(usuario) {
 
 }
 
+async function encontrarUsuarioPorEmail(email) {
+    return await Usuario.findOne({email: email})
+
+}
+
 module.exports = {
-    crearNuevoUsuario
+    crearNuevoUsuario,
+    encontrarUsuarioPorEmail
 }

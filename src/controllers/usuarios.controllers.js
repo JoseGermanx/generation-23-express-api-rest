@@ -1,4 +1,6 @@
-const { crearNuevoUsuario } = require("../models/usuarios.mongoose");
+const bycrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const { crearNuevoUsuario, encontrarUsuarioPorEmail } = require("../models/usuarios.mongoose");
 
 
 const registrar = async (req, res, next) => {
@@ -33,8 +35,29 @@ const login = async (req, res, next) => {
 
         // consulta al modelo para validar identidad del usuario
 
+        // verificar el email
+        const usuario = await encontrarUsuarioPorEmail(email);
+
+        if(!usuario) {
+            return res.status(401).json({msg: "Credenciales inválidas."})
+        }
+
+        // validar la contraseña
+        const passwordValidate = await bycrypt.compare(password, usuario.password);
+
+        if(!passwordValidate) {
+            return res.status(401).json({msg: "Credenciales inválidas."})
+        }
+
+        // generamos token de acceso
+
+        const token = jwt.sign({id: usuario._id, email: usuario.email, rol: usuario.rol}, "secret_key_la_generamos_nosotros", {expiresIn: '8h'})
+
+
+        // respuesta al cliente con su información de acceso
         res.status(200).json({
-            msg: "Login correcto"
+            msg: "Login correcto",
+            token: token
         })
         
     } catch (error) {
