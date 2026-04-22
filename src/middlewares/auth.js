@@ -30,9 +30,8 @@ const auth = (req, res, next) => {
         next();
 
     } catch (error) {
-        return res.status(401).json({
-            msg: "Token inválido o expirado."
-        })
+        error.message = "Hubo un error con el token."
+        next(error)
     }
 };
 
