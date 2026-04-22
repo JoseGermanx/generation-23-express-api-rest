@@ -16,7 +16,7 @@ const obtenerReservas = async (req, res) => {
 
 const crearReserva = async (req, res, next) => {
 
-    const { espacioId, fecha, horaInicio, horaFin } = req.body;
+    const {espacioId, fecha, horaInicio, horaFin } = req.body;
 
     try {        
         const nuevaReserva = {

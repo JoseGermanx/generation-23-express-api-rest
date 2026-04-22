@@ -7,9 +7,9 @@
 // Definir el schema
 
 const espacioSchema = new mongoose.Schema({
-    nombre: {type: String, require: true},
-    ubicacion: {type: String, require: true},
-    capacidad: {type: Number, require: true},
+    nombre: {type: String, required: true},
+    ubicacion: {type: String, required: true},
+    capacidad: {type: Number, required: true},
     disponibilidad: {type: Boolean, default: true}
 })
 

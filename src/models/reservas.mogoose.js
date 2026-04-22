@@ -6,10 +6,10 @@
  // schema
 
  const reservaSchema = new mongoose.Schema({
-    "espacioId": {type: mongoose.Schema.Types.ObjectId, require: true, ref: 'Espacio'},
-    "fecha": {type: String, require: true},
-    "horaInicio": {type: String, require: true},
-    "horaFin": {type: String, require: true},
+    "espacioId": {type: mongoose.Schema.Types.ObjectId, required: true, ref: 'Espacio'},
+    "fecha": {type: String, required: true},
+    "horaInicio": {type: String, required: true},
+    "horaFin": {type: String, required: true},
  })
 
  // model
