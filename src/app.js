@@ -8,6 +8,7 @@ const reservarRoutes = require("./routes/reservas.routes");
 const usuariosRoutes = require("./routes/users.routes")
 const errorHandler = require("./middlewares/errorHandler");
 const notFound = require("./middlewares/notFound");
+const auth = require("./middlewares/auth");
 
 const app = express();
 
@@ -34,10 +35,10 @@ app.use((req, res, next)=>{ // Middleware personalizado
 
 // Rutas de espacios
 // app.use("/api/v1/espacios", espaciosRoutes); definición específica de una versión de la api
-app.use("/espacios", espaciosRoutes); 
+app.use("/espacios", auth, espaciosRoutes); 
 
 // Rutas de reservas
-app.use("/reservas", reservarRoutes);
+app.use("/reservas", auth, reservarRoutes);
 
 // Rutas de gestion de usuarios
 app.use("/usuario", usuariosRoutes)
