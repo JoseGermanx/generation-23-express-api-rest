@@ -1,3 +1,6 @@
+//load env
+process.loadEnvFile();
+
 // Levantar el servidor
 
 const app = require("./app");

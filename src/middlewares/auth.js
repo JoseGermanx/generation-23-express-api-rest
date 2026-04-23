@@ -22,7 +22,7 @@ const auth = (req, res, next) => {
     // verificar el token
 
     try {
-        const payload = jwt.verify(token, "secret_key_la_generamos_nosotros");
+        const payload = jwt.verify(token, process.env.SECRECT_KEY);
 
         // pasar información del usuario al siguiente middleware o controlador
         req.user = payload;
