@@ -4,10 +4,10 @@ const { obtenerUnEspacioPorId } = require("../models/espacios.mongoose");
 
 const validateReserva = async (req, res, next) => {
 
-    const { espacioId, fecha, horaInicio, horaFin } = req.body;
+    const { usuario, espacio, fecha, horaInicio, horaFin } = req.body;
 
     // validar que todos los campos sean obligatorios
-    if (!espacioId || !fecha || !horaInicio || !horaFin ) {
+    if (!usuario || !espacio || !fecha || !horaInicio || !horaFin ) {
         return res.status(400).json({
             msg: "Todos los campos son obligatorios."
         })
@@ -17,7 +17,7 @@ const validateReserva = async (req, res, next) => {
         
         // validar id del espacio que se va a reservar
     
-        const espacioExiste = await obtenerUnEspacioPorId(espacioId)
+        const espacioExiste = await obtenerUnEspacioPorId(espacio)
     
         if(!espacioExiste) {
             return res.status(404).json({
