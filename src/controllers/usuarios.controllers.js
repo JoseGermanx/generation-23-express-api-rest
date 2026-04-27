@@ -1,6 +1,7 @@
 const bycrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { crearNuevoUsuario, encontrarUsuarioPorEmail } = require("../models/usuarios.mongoose");
+const { connect } = require('../database/mongoose');
 
 
 const registrar = async (req, res, next) => {
@@ -8,7 +9,8 @@ const registrar = async (req, res, next) => {
     try {
         const { nombre, email, password } = req.body;
 
-        // validación 
+        // validación
+        await connect();
 
         // consulta al modelo para crear el documento en la base de datos
         const usuario = await crearNuevoUsuario({ nombre, email, password })
