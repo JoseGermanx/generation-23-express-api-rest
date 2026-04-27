@@ -4,7 +4,7 @@
 // async function connect() {
 
 //     try {
-//         await mongoose.connect(process.env.MONGODB_URI);
+//         await mongoose.connect(process.env.MONGO_URI);
 //         console.log("Mongo corriendo correctamente.")
 //     } catch (error) {
 //         throw new Error(error)
@@ -19,10 +19,10 @@
 // db.js
 const mongoose = require("mongoose");
 
-const MONGODB_URI = process.env.MONGODB_URI;
+const MONGO_URI = process.env.MONGO_URI;
 
-if (!MONGODB_URI) {
-  throw new Error("Falta la variable MONGODB_URI");
+if (!MONGO_URI) {
+  throw new Error("Falta la variable MONGO_URI");
 }
 
 let cached = global.mongoose;
@@ -43,7 +43,7 @@ async function connect() {
       }
     
       if (!cached.promise) {
-        cached.promise = mongoose.connect(MONGODB_URI, {
+        cached.promise = mongoose.connect(MONGO_URI, {
           bufferCommands: false,
         });
         console.log("MongoDB conectado correctamente.");
