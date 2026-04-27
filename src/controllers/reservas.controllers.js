@@ -1,4 +1,4 @@
-const { obtenerTodasLasReservas, crearUnaNuevaReserva } = require("../models/reservas.mogoose");
+const { obtenerTodasLasReservas, crearUnaNuevaReserva, obtenerReservasPorUsuario } = require("../models/reservas.mogoose");
 
 
 
@@ -36,7 +36,18 @@ const crearReserva = async (req, res, next) => {
 }
 
 
+const obtenerReservasPorUsuarioId = async (req, res, next) => {
+    try {
+        const { usuarioId } = req.params;
+        const reservas = await obtenerReservasPorUsuario(usuarioId);
+        res.status(200).json(reservas);
+    } catch (error) {
+        next(error);
+    }
+};
+
 module.exports = {
     obtenerReservas,
-    crearReserva
+    crearReserva,
+    obtenerReservasPorUsuarioId
 }

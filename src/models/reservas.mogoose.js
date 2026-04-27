@@ -55,8 +55,21 @@ const Reserva = mongoose.model('Reserva', reservaSchema);
  }
 
 
+ // obtener reservas por id de usuario
+ async function obtenerReservasPorUsuario(usuarioId) {
+    return await Reserva.find({ usuario: usuarioId }).populate('espacio', {
+      ubicacion: 0,
+      disponibilidad: 0,
+      id: 0,
+      capacidad: 0,
+      _id: 0
+    });
+ }
+
+
  module.exports = {
     obtenerTodasLasReservas,
     crearUnaNuevaReserva,
-    encontrarReservaPrevia
+    encontrarReservaPrevia,
+    obtenerReservasPorUsuario
  }
