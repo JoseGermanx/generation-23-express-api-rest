@@ -1,3 +1,4 @@
+const { connect } = require("../database/mongoose");
 const { encontrarReservaPrevia } = require("../models/reservas.mogoose");
 
 
@@ -6,6 +7,7 @@ const validarConflicto = async (req, res, next) => {
   const { espacio, fecha, horaInicio, horaFin } = req.body;
 
   try {
+    await connect();
     //aquí esta el error
     const hayConflicto = await encontrarReservaPrevia(espacio, fecha, horaInicio, horaFin);
 

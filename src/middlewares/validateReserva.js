@@ -1,3 +1,4 @@
+const { connect } = require("../database/mongoose");
 const { getAllEspacios } = require("../models/espacios.models");
 const { obtenerUnEspacioPorId } = require("../models/espacios.mongoose");
 
@@ -14,7 +15,7 @@ const validateReserva = async (req, res, next) => {
     }
 
     try {
-        
+        await connect();
         // validar id del espacio que se va a reservar
     
         const espacioExiste = await obtenerUnEspacioPorId(espacio)
