@@ -1,9 +1,11 @@
+const { connect } = require("../database/mongoose");
 const { obtenerTodasLasReservas, crearUnaNuevaReserva, obtenerReservasPorUsuario } = require("../models/reservas.mogoose");
 
 
 
 const obtenerReservas = async (req, res) => {
     try {
+        await connect();
         const reservas = await obtenerTodasLasReservas(); // pide los datos a la capa modelo
         res.status(200).json(reservas) // respuesta al cliente
     } catch (error) {
@@ -19,6 +21,7 @@ const crearReserva = async (req, res, next) => {
     const {usuario, espacio, fecha, horaInicio, horaFin } = req.body;
 
     try {        
+        await connect();
         const nuevaReserva = {
             usuario,
             espacio,
@@ -39,6 +42,7 @@ const crearReserva = async (req, res, next) => {
 const obtenerReservasPorUsuarioId = async (req, res, next) => {
     try {
         const { usuarioId } = req.params;
+        await connect();
         const reservas = await obtenerReservasPorUsuario(usuarioId);
         res.status(200).json(reservas);
     } catch (error) {

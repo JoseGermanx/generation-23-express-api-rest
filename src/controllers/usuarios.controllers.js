@@ -38,6 +38,7 @@ const login = async (req, res, next) => {
         // consulta al modelo para validar identidad del usuario
 
         // verificar el email
+        await connect();
         const usuario = await encontrarUsuarioPorEmail(email);
 
         if(!usuario) {

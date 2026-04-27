@@ -1,8 +1,10 @@
+const { connect } = require("../database/mongoose");
 const { obtenerTodosLosEspacios } = require("../models/espacios.mongoose");
 
 const obtenerEspacios = async (req, res, next) => {
 
-    try {            
+    try {          
+        await connect();  
         const espacios = await obtenerTodosLosEspacios(); // pide los datos a la capa modelo
         res.status(200).json(espacios) // respuesta al cliente
     } catch (error) {
@@ -15,7 +17,7 @@ const crearEspacios = async (req, res) => {
         msg: "Crear espacios"
     })
 }
-
+    
 
 module.exports = {
     obtenerEspacios,
